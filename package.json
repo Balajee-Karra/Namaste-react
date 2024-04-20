@@ -1,0 +1,31 @@
+{
+  "name": "namasthe-react",
+  "version": "1.0.0",
+  "description": "This is Namasthe react by Balajee K",
+  "scripts": {
+    "start": "parcel Index.html",
+    "build": "parcel build Index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balajee-Karra/Namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Balajee K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balajee-Karra/Namaste-react/issues"
+  },
+  "homepage": "https://github.com/Balajee-Karra/Namaste-react#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0",
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

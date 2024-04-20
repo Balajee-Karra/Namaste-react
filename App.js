@@ -1,25 +1,16 @@
-// <!-- // Hello World Program through Java Script
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// <script>
-//     const heading = document.createElement("h1");
-//     heading.innerHTML="Hello World from Java Script!";
-//     const root=document.getElementById("root");
-//     root.appendChild(heading); 
-// </script> -->
+// React.createElement ==> Object ==> HTML element(render)
 
-// const heading = React.createElement("h1",{id:"heading",xyz:"abc"},"Hello World From React!");
-// const root=ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
+// const heading=React.createElement("h1",{id:"heading"},"Namasthe React JS");
 
-const parent = React.createElement("div", { id: "parent" }, [
-    React.createElement("div", { id: "child1" }, [
-        React.createElement("h1", { id: "heading1" }, "I am H1 Tag"),
-        React.createElement("h2", { id: "heading2" }, "I am H2 Tag")
-    ]),
-    React.createElement("div", { id: "child2" }, [
-        React.createElement("h1", { id: "heading1" }, "I am H1 Tag"),
-        React.createElement("h2", { id: "heading2" }, "I am H2 Tag")
-    ])
-]);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// JSX is HTML like [OR] XML - like syntax
+// JSX (It's transpiled the code before reaches JS Engine) -- PARCEL - Babel
+// JSX ==> React.createElement ==> Object ==> HTML element(render)
+
+const jsxheading=<h1 className="heading" tabIndex="1">Namasthe React using JSX</h1>;
+
+const root=ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxheading);
