@@ -88,3 +88,23 @@ const HeadingComponent = () => (
 const root=ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<HeadingComponent/>); -->
+
+
+/*  Header
+**    - Logo  
+**    - Navigation Bar
+**  Body
+**    - Search Bar
+**    - Restaurant container
+**      - Restaurant cards 
+**  Footer
+**     - Copy writes
+**     - Links
+**     - Address
+**     - Contact
+**
+*/  
+
+** React Hooks
+
+(Normal Utility Functions)
