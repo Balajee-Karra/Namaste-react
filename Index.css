@@ -1,54 +1,135 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid;
-}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .h3 {
+  font-family: 'Courier New', Courier, monospace;
+  }
 
-.logo{
+  .h4 {
+    font-family: 'Courier New', Courier, monospace;
+    }
+
+  .logo {
     width: 100px;
-}
-
-.res-card{
-    text-align: center;
-}
-
-.nav-items > ul {
+  }
+  
+  .nav-items > ul {
     display: flex;
     list-style-type: none;
-}
-
-.nav-items> ul > li{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-items > ul > li {
     padding: 5px;
-    margin: 9px;
+    margin: 0 10px;
     font-size: 21px;
-}
+  }
+  
+  .search {
+    padding: 10px;
+  }
+  
+  .filter-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-style:double;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
 
-.res-container{
-     display: flex;
-     flex-wrap: wrap;
-}
-
-.res-card {
-    margin: 5px;
-    padding: 5px;
+  }
+  
+  .filter-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .res-card {
+    margin: 10px;
+    padding: 15px;
     width: 200px;
-    height: auto;
-}
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: border-color 0.3s ease;
+  }
+  
+  .res-card > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    margin: 0;
+    padding: 10px 0;
+  } 
 
-.res-logo{
-    width: 100%;
-}
+  .res-card > h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: small; /* Adjust the size as needed */
+    margin: 0;
+    padding: 10px 0;
+  } 
 
-.res-card:hover{
+  .res-card:hover {
     cursor: pointer;
     border: 1px solid black;
+  }
+  
+  .res-logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    margin-top: 10px;
+  }
+  
+  /* Ensure the body takes up the full height of the viewport */
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.search{
-    padding: 10px;
+/* Center the filter div */
+.filter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.filter-btn{
-    margin: 10px;
+/* Style the button */
+.filter-btn {
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+}
+
+/* Container for restaurant cards */
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }

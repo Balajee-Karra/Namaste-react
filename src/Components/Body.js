@@ -1,79 +1,30 @@
 import RestaurantCard from "./RestaurantCard";
-import resObj from "../Utils/mockData";
-import { useState } from "react";
-import { useEffect } from "react";
-
-// const [ListofRestaurants, SetListofRestaurant] = useState([
-//   {
-//       "info": {
-//         "id": "10575",
-//         "name": "Pizza Hut",
-//         "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
-//         "locality": "Shanti Nagar",
-//         "areaName": "Shanti Nagar",
-//         "costForTwo": "₹600 for two",
-//         "cuisines": [
-//           "Pizzas"
-//         ],
-//         "avgRating": 4.2,
-//         "parentId": "721",
-//         "avgRatingString": "4.2",
-//         "totalRatingsString": "5K+"
-//     }
-//   },
-//   {
-//       "info": {
-//         "id": "10579",
-//         "name": "Dominos",
-//         "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
-//         "locality": "Shanti Nagar",
-//         "areaName": "Shanti Nagar",
-//         "costForTwo": "₹600 for two",
-//         "cuisines": [
-//           "Pizzas"
-//         ],
-//         "avgRating": 3.8,
-//         "parentId": "721",
-//         "avgRatingString": "4.2",
-//         "totalRatingsString": "5K+"
-//     }
-//   },
-//   {
-//       "info": {
-//         "id": "10576",
-//         "name": "KFC",
-//         "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
-//         "locality": "Shanti Nagar",
-//         "areaName": "Shanti Nagar",
-//         "costForTwo": "₹600 for two",
-//         "cuisines": [
-//           "Pizzas"
-//         ],
-//         "avgRating": 4.5,
-//         "parentId": "721",
-//         "avgRatingString": "4.2",
-//         "totalRatingsString": "5K+"
-//     }
-//   }
-// ]);
-
+import { useState, useEffect } from "react";
 
 const Body = () => {
-    const [ListofRestaurants, SetListofRestaurant] = useState(resObj.restaurants);
+    const [ListofRestaurants, SetListofRestaurant] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        SetListofRestaurant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    };
 
     return (
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
-                    filteredList = ListofRestaurants.filter((res) => res.info.avgRating> 4
-                    );   
+                    const filteredList = ListofRestaurants.filter((res) => res.info.avgRating > 4);
                     SetListofRestaurant(filteredList);
-                }
-                }> Top Rated Restaurants </button>
+                }}>Top Rated Restaurants</button>
             </div>
             <div className="res-container">
                 {ListofRestaurants.map(restaurant => (
-                    <RestaurantCard key={restaurant.info.id} resData={restaurant.info}/>
+                    <RestaurantCard key={restaurant.info.id} resData={restaurant.info} />
                 ))}
             </div>
         </div>
