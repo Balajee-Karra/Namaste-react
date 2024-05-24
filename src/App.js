@@ -11,7 +11,7 @@ const AppLayout = () => {
    return (
     <div className="app">
         <Header/>
-        <Body1/>
+        <Body/>
     </div>
   )
 }

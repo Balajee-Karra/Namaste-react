@@ -39,7 +39,12 @@ body {
   .search {
     padding: 10px;
   }
-  
+
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
   .filter-btn {
     margin: 10px;
     padding: 10px 20px;
@@ -48,8 +53,7 @@ body {
     border-style:double;
     cursor: pointer;
     text-align: center;
-    display: inline-block;
-
+    display: flex;
   }
   
   .filter-btn:hover {
@@ -111,25 +115,30 @@ body {
     justify-content: center;
 }
 
-/* Center the filter div */
-.filter {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-/* Style the button */
-.filter-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 /* Container for restaurant cards */
 .res-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+}
+
+.Shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Shimmer-card {
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0ff;
+}
+
+.Search {
+  padding: 10px;
+}
+
+.btn {
+  margin: 10px;
 }
