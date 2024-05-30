@@ -1,144 +1,209 @@
+/* Reset default styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .header {
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .h3 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black; /* Set default font color to black */
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 3px solid #ccc;
+}
+
+/* Heading styles */
+.h2,
+.h3,
+.h4 {
+  margin-top: 50px; /* Add more space between h2, h3, and h4 */
+  margin-bottom: 50px;
+}
+
+/* Styles for h3 and h4 */
+.h3,
+.h4 {
   font-family: 'Courier New', Courier, monospace;
-  }
+  margin-top: 50px; /* Add extra space between h3 and h4 */
+}
 
-  .h4 {
-    font-family: 'Courier New', Courier, monospace;
-    }
+/* Styles for h2 */
+.h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
 
-  .logo {
-    width: 100px;
-  }
-  
-  .nav-items > ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-items > ul > li {
-    padding: 5px;
-    margin: 0 10px;
-    font-size: 21px;
-  }
-  
-  .search {
-    padding: 10px;
-  }
+/* Logo styles */
+.logo {
+  width: 100px;
+}
 
-  .filter {
-    display: flex;
-    flex-wrap: wrap;
-  }
- 
-  .filter-btn {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-style:double;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-  }
-  
-  .filter-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .res-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .res-card {
-    margin: 10px;
-    padding: 15px;
-    width: 200px;
-    border: 1px solid #ccc;
-    text-align: center;
-    transition: border-color 0.3s ease;
-  }
-  
-  .res-card > h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: small;
-    margin: 0;
-    padding: 10px 0;
-  } 
+/* Navigation styles */
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .res-card > h4 {
-    font-family: 'Roboto', sans-serif;
-    font-size: small; /* Adjust the size as needed */
-    margin: 0;
-    padding: 10px 0;
-  } 
+.nav-items > ul > li {
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 21px;
+  color: black; /* Ensure navigation items have black font color */
+  text-decoration: none; /* Remove any potential underlines */
+}
 
-  .res-card:hover {
-    cursor: pointer;
-    border: 1px solid black;
-  }
-  
-  .res-logo {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .card-info {
-    margin-top: 10px;
-  }
-  
-  /* Ensure the body takes up the full height of the viewport */
+.nav-items > ul > li a {
+  color: black; /* Ensure link items have black font color */
+  text-decoration: none; /* Remove any potential underlines */
+}
+
+/* Search styles */
+.search {
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Filter styles */
+.filter {
+  display: flex;
+  justify-content: center; /* Horizontally center the button */
+  align-items: center; /* Vertically center the button */
+  margin-bottom: 20px; /* Add space between the button and restaurant cards */
+}
+
+.filter-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-style: double;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Restaurant container styles */
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  color: black; /* Ensure text in the container is black */
+}
+
+/* Restaurant card styles */
+.res-card {
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+  height: 280px; /* Set a specific height for the cards */
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  background-color: #f0f0f0;
+  color: black;
+  text-decoration: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.res-card > h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+  padding: 0;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.res-card > h4 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  margin: 10px 0 5px 0; /* Add extra space between h3 and h4 */
+  padding: 0;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.res-card > .rating {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 5px 0;
+  color: green; /* Color for the rating text */
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  transform: scale(0.95); /* Scale down on hover */
+}
+
+.res-container a {
+  color: black; /* Ensure link text is black */
+  text-decoration: none; /* Remove any potential underlines */
+}
+
+.res-container a:hover {
+  color: black; /* Ensure link text remains black on hover */
+  text-decoration: none; /* Remove any potential underlines on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.res-logo {
+  width: 100%;
+  height: 150px; /* Set a specific height for the images */
+  object-fit: cover; /* Ensure images cover the entire space */
+  border-radius: 15px 15px 0 0;
+}
+
+.card-info {
+  margin-top: 10px;
+  color: black; /* Ensure text in the card info section is black */
+}
+
+/* Ensure the body takes up the full height of the viewport */
 body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black; /* Ensure body text is black */
 }
 
 /* Container for restaurant cards */
 .res-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  color: black; /* Ensure text in the container is black */
 }
 
 .Shimmer-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Shimmer-card {
-    margin: 20px;
-    width: 200px;
-    height: 400px;
-    background-color: #f0f0ff;
-}
-
-.Search {
-  padding: 10px;
-}
-
-.btn {
-  margin: 10px;
+  margin: 20px;
+  width: 200px;
 }
